@@ -1,0 +1,412 @@
+<html class="pixel-ratio-0 watch-active-state"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>x7zH</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/framework7.ios.min.css">
+<link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+
+<style>
+body#body {
+    font-family: "az";
+}    
+</style>
+
+    </head>
+
+<body id="body" onload="init();" class="layout-white framework7-root">
+<div class="statusbar-overlay"></div>
+<div class="views tabs navbar-through toolbar-through">
+    
+    <!--  القسم الاول -->
+<div id="tab-1" class="view view-main tab active" data-page="index">
+<div class="pages">
+<div data-page="index" class="page">
+<div class="page-content pull-to-refresh-content" data-ptr-distance="55">
+<div class="pull-to-refresh-layer">
+<div class="preloader"></div>
+</div>
+<div class="content-block">
+<h5 style="margin-bottom:0px;margin-top:-48px;">
+  <strong>
+    
+                <script>
+
+var fixd;
+
+function isGregLeapYear(year)
+{
+return year%4 == 0 && year%100 != 0 || year%400 == 0;
+}
+
+
+function gregToFixed(year, month, day)
+{
+var a = Math.floor((year - 1) / 4);
+var b = Math.floor((year - 1) / 100);
+var c = Math.floor((year - 1) / 400);
+var d = Math.floor((367 * month - 362) / 12);
+
+if (month <= 2)
+e = 0;
+else if (month > 2 && isGregLeapYear(year))
+e = -1;
+else
+e = -2;
+
+return 1 - 1 + 365 * (year - 1) + a - b + c + d + e + day;
+}
+
+function Hijri(year, month, day)
+{
+this.year = year;
+this.month = month;
+this.day = day;
+this.toFixed = hijriToFixed;
+this.toString = hijriToString;
+}
+
+function hijriToFixed()
+{
+return this.day + Math.ceil(29.5 * (this.month - 1)) + (this.year - 1) * 354 +
+Math.floor((3 + 11 * this.year) / 30) + 227015 - 1;
+}
+
+function hijriToString()
+{
+var months = new Array("محرم","صفر","ربيع أول","ربيع ثانى","جمادى أول","جمادى ثانى","رجب","شعبان","رمضان","شوال","ذو القعدة","ذو الحجة");
+return this.day + " " + months[this.month - 1]+ " ";
+}
+
+function fixedToHijri(f)
+{
+var i=new Hijri(1100, 1, 1);
+i.year = Math.floor((30 * (f - 227015) + 10646) / 10631);
+var i2=new Hijri(i.year, 1, 1);
+var m = Math.ceil((f - 29 - i2.toFixed()) / 29.5) + 1;
+i.month = Math.min(m, 12);
+i2.year = i.year;
+i2.month = i.month;
+i2.day = 1;
+i.day = f - i2.toFixed() + 2;
+return i;
+}
+
+var tod=new Date();
+var weekday=new Array("الأحد","الإثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت");
+var monthname=new Array("يناير","فبراير","مارس","إبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر");
+
+var y = tod.getFullYear();
+var m = tod.getMonth();
+var d = tod.getDate();
+var dow = tod.getDay();
+document.write(weekday[dow] + ", " + " " + " ");
+m++;
+fixd=gregToFixed(y, m, d);
+var h=new Hijri(1421, 11, 28);
+h = fixedToHijri(fixd);
+					                   document.write("<span>" +h.toString() + "<\/span>")
+                                </script>
+    
+
+</strong> </h5>
+<h1 class="header" style="margin-top:0px; margin-bottom:0px;">اليوم</h1>
+<div style="margin-top: -58px; width:100%; text-align:right;">
+الوضع الليلي
+<form id="my-form" class="store-data">
+<label class="label-switch">
+<input type="checkbox" name="switch">
+<div class="checkbox" onclick="toggleTheme();"></div>
+</label>
+</form>
+</div>
+<center>
+<div class="hr"></div>
+<div class="content-block" style="max-width:414px; margin: 16px; margin-left: -16px;">
+
+<div class="app-card">
+<div class="list-block">
+<div class="item-content">
+<div class="item-media">
+ <img class="app-icon" src="https://images.vexels.com/media/users/3/137411/isolated/preview/2d2700cbc33a006fc7be45736cb80b07-snapchat-icon-logo-by-vexels.png">
+</div>
+<div class="item-inner">
+<div class="item-title">تابعني سناب!</div>
+<div class="item-after">
+<a href="https://snapchat.com/add/cq-j/" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">SNAP</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="app-card-2">
+<div class="content-block" style="margin-top:0px; margin-bottom:0px; padding-top:10px; padding-bottom:10px;">
+<h4 style="margin:0px;"></h4>
+<h2 class="header" style="margin:0px;">قائمة التطبيقات</h2>
+</div>
+<div class="list-block media-list">
+<ul>
+
+	<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/tiktok.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">TikTok++</div>
+<div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D156" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">تيك توك بلس ميزات عديده</div>
+</div>
+</div>
+	
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/tiktok.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">TikTok++</div>
+<div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D156" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<a href="../../">نسخة مكرره</a>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/rocket.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">Rocket For instagram</div>
+<div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D156" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">انستقرام بلس ميزات عديده</div>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/rocket.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">Rocket For instagram </div>
+<div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D173" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<a href="../../">نسخة مكرره</a>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/twitter.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">Twitter++</div>
+<div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D43" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">تويتر بلس ميزات عديده</div>
+</div>
+</div>
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/youtube.jpg"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">YoutubeCercube++</div>
+<div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D177" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+
+</div>
+</div>
+<div class="item-subtitle">يوتيوب بلس ميزات عديده اهمها التنزيل</div>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/anime.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">anime cloud
+</div>
+ <div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D86" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle"> انمي كلاود الاصلي محذوف من الستور </div>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/cutepro.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">cute cut pro
+</div>
+ <div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D20" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">نسخة مدفوعه كامله</div>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/shahed.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">شاهد بلس
+</div>
+ <div class="item-after">
+<a href="iitms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D182" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">اشتراك مجاني </div>
+
+<div class="item-subtitle">افتح التطبيق واختار سيرفر</div>
+</div>
+</div>
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/vs.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">Videostar++
+</div>
+ <div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D299" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">مهكر مفتوح ميزاته</div>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/Jodel.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">Jodel++</div>
+ <div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D296" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">ميزات عديده اهمها تغيير الموقع </div>
+<div class="item-subtitle">ورفع صور من الالبوم</div>
+</div>
+</div>
+
+
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/infltr.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">Infltr++</div>
+ <div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D287" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">مهكر مفتوح ميزاته</div>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/pic.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">Picsart++</div>
+ <div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D135" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">مهكر مفتوح ميزاتع</div>
+<div class="item-subtitle">سجل دخول ب اي حساب يفتح لك بيرميوم</div>
+</div>
+</div>
+
+
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/Ju.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">unc0ver</div>
+ <div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D311" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">اصدار:8.0.2</div>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+<div class="item-content">
+<div class="item-media"><img class="app-icon" src="imgae/Jt.png"></div>
+<div class="item-inner">
+<div class="item-title-row">
+<div class="item-title">Taurine</div>
+ <div class="item-after">
+<a href="itms-services://?action=download-manifest&url=https://ignition.fun/install.php%3Fapp%3D311" target="_blank" class="button button-fill button-round external" style="background: #F0F1F6; color: #007AFF; font-weight:bold;">تثبيت</a>
+</div>
+</div>
+<div class="item-subtitle">اصدار:1.1.3</div>
+<div class="item-subtitle"></div>
+</div>
+</div>
+
+</ul>
+ </div>
+<br>
+</div>
+</div>
+<br>
+</center>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/icon.js"></script>
+
+
+<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/inobounce/0.1.5/inobounce.min.js"></script>
+
+
+
+
+<!-- 
